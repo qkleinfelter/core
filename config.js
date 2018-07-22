@@ -21,6 +21,8 @@ const defaults = {
   ENABLE_UUID_CACHE: true, // cache player stats
   ENABLE_DB_CACHE: true, // set to enable MongoDB cache
   UUID_CACHE_SECONDS: 21600, // number of seconds to cache username-uuid pairs
+  GC_HEARTBEAT_TIMEOUT: 5000, // milliseconds to timeout if no heartbeat is reveived
+  GC_HEARTBEAT_INTERVAL: 25000, // milliseconds between heartbeat packets to client
 };
 
 // ensure that process.env has all values in defaults, but prefer the process.env value
